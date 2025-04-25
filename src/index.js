@@ -115,35 +115,79 @@ const swiper = new Swiper('.swiper', {
 //REES46
 
 
-const giftCards = new GiftCard('.template_type_gift-card', '.gift__item', localLanguage); //Карточка подарка
-const cardsContainer = new Section({
-  items: gifts,
-  renderer: (element) => {
-    cardsContainer.addElement(element);
+// const giftCards = new GiftCard('.template_type_gift-card', '.gift__item', localLanguage); //Карточка подарка
+// const cardsContainer = new Section({
+//   items: gifts,
+//   renderer: (element) => {
+//     cardsContainer.addElement(element);
+//   }
+// }, '.gift__list');
+
+// let firstHalfGifts = gifts.splice(0, 10);
+
+// function renderCard() {
+//   firstHalfGifts.forEach(gift => {
+//     const cardToRender = giftCards.renderCard(gift);
+
+//     cardsContainer.addElement(cardToRender);
+//   });
+// }
+
+// function showMore() {
+//   gifts.forEach(gift => {
+//     const cardToRender = giftCards.renderCard(gift);
+
+//     cardsContainer.addElement(cardToRender);
+//   });
+// }
+
+// showMoreButton.addEventListener('click', () => {
+//   showMore();
+//   showMoreButton.remove();
+// });
+
+// renderCard();
+
+const tabButtonsContainer = document.querySelector('.periods__tabs-new');
+const tabButtons = tabButtonsContainer.querySelectorAll('.periods__tab');
+const giftListContainer = document.querySelector('.periods__gifts-cards');
+let currentTabIndex = 0;
+
+function displayGifts(tabIndex) {
+  giftListContainer.innerHTML = ''; // очищаем содержимое
+  const index = Number(tabIndex);
+  const giftsForTab = gifts[tabIndex];
+  
+  if (!giftsForTab) {
+    console.error(`Нет подарков для таба с индексом ${index}`);
+    return;
   }
-}, '.gift__list');
 
-let firstHalfGifts = gifts.splice(0, 10);
+  giftsForTab.forEach(gift => {
+    const giftElement = document.createElement('li');
+    giftElement.classList.add('gift__item');
 
-function renderCard() {
-  firstHalfGifts.forEach(gift => {
-    const cardToRender = giftCards.renderCard(gift);
+    giftElement.innerHTML = `
+      <img class="gift__image" src="${gift.image}" alt="${gift.title}">
+      <h3 class="gift__item-title">${gift.title}</h3>
+      <p class="gift__subtitle">${gift.count}</p>
+      
+    `;
 
-    cardsContainer.addElement(cardToRender);
+    giftListContainer.appendChild(giftElement);
   });
-}
+};
 
-function showMore() {
-  gifts.forEach(gift => {
-    const cardToRender = giftCards.renderCard(gift);
+tabButtons.forEach(button => {
+  button.addEventListener('click', (event) => {
+    const tabIndex = Number(event.target.dataset.tab); // Преобразуем в число
+    currentTabIndex = tabIndex; // Обновляем текущий индекс таба
 
-    cardsContainer.addElement(cardToRender);
+    tabButtons.forEach(btn => btn.classList.remove('periods__tab_active'));
+    event.target.classList.add('periods__tab_active');
+    
+    displayGifts(tabIndex); // Отображаем подарки для нового таба
   });
-}
-
-showMoreButton.addEventListener('click', () => {
-  showMore();
-  showMoreButton.remove();
 });
 
-renderCard();
+displayGifts(currentTabIndex);

@@ -1,187 +1,378 @@
 //Подарки для секции "Подарки от Samsung"
 
-export const gifts = [
-  {
-    image: 'https://www.technodom.kz/under/samsung-windfree-raffle/gift1.png', 
-    title: 'Вертикальный пылесос Samsung Jet 75E Complete',
-    kkTitle: 'Samsung Jet 75E Complete Complete тік шаңсорғышы',
-    count: '2', // кол-во шт.
-    link: '#' //ссылка на товар
-  },
-
-  {
-    image: 'https://www.technodom.kz/under/samsung-windfree-raffle/gift2.png',
-    title: 'Смартфон Samsung Galaxy A25 5G 128GB',
-    kkTitle: 'Samsung Galaxy A25 5G 128GB смартфоны',
-    count: '3',
-    link: '#'
-  },
-
-  {
-    image: 'https://www.technodom.kz/under/samsung-windfree-raffle/gift3.png',
-    title: 'Смартфон Samsung Galaxy A54 128GB',
-    kkTitle: 'Samsung Galaxy A54 128GB смартфоны',
-    count: '2',
-    link: '#'
-  },
-
-  {
-    image: 'https://www.technodom.kz/under/samsung-windfree-raffle/gift4.png',
-    title: 'Микроволновая печь Samsung MG23T5018AE/BW',
-    kkTitle: 'Samsung MG23T5018AE/BW микротолқынды пеші',
-    count: '3',
-    link: '#'
-  },
-
-  {
-    image: 'https://www.technodom.kz/under/samsung-windfree-raffle/gift5.png',
-    title: 'Вертикальный пылесос Samsung Jet 85 Complete',
-    kkTitle: 'Samsung Jet 85 Complete тік шаңсорғышы',
-    count: '1',
-    link: '#'
-  },
-
-  {
-    image: 'https://www.technodom.kz/under/samsung-windfree-raffle/gift6.png',
-    title: 'Смартфон Samsung Galaxy S23 128GB',
-    kkTitle: 'Samsung Galaxy S23 128GB смартфоны',
-    count: '1',
-    link: '#'
-  },
-
-  {
-    image: 'https://www.technodom.kz/under/samsung-windfree-raffle/gift7.png',
-    title: 'Смартфон Samsung Galaxy S23 256GB',
-    kkTitle: 'Samsung Galaxy S23 256GB смартфоны',
-    count: '1',
-    link: '#'
-  },
-
-  {
-    image: 'https://www.technodom.kz/under/samsung-windfree-raffle/gift8.png',
-    title: 'Аудиосистема Samsung Giga Party MX-ST40B/RU',
-    kkTitle: 'Samsung Giga Party MX-ST40B/RU аудиожүйесі',
-    count: '1',
-    link: '#'
-  },  
-
-  {
-    image: 'https://www.technodom.kz/under/samsung-windfree-raffle/gift9.png',
-    title: 'Планшет 8.7" Samsung Tab A9 128Gb/8Gb WiFi + LTE',
-    kkTitle: '8.7 " Samsung Tab A9 128GB / 8Gb WiFi + LTE планшеті',
-    count: '5',
-    link: '#'
-  },
-
-  {
-    image: 'https://www.technodom.kz/under/samsung-windfree-raffle/gift10.png',
-    title: 'Вертикальный пылесос Samsung JET 60 Turbo',
-    kkTitle: 'Samsung Jet 60 Turbo тік шаңсорғышы',
-    count: '1',
-    link: '#'
-  },
-
-  {
-    image: 'https://www.technodom.kz/under/samsung-windfree-raffle/gift11.png',
-    title: 'Смарт Часы Samsung Galaxy Watch6 40mm',
-    kkTitle: 'Samsung Galaxy Watch6 40mm смарт сағаты',
-    count: '1',
-    link: '#'
-  },
-
-  {
-    image: 'https://www.technodom.kz/under/samsung-windfree-raffle/gift12.png',
-    title: 'Смарт Часы Samsung Galaxy Watch6 44mm',
-    kkTitle: 'Samsung Galaxy Watch6 44mm смарт сағаты',
-    count: '2',
-    link: '#'
-  },
-
-  {
-    image: 'https://www.technodom.kz/under/samsung-windfree-raffle/gift13.png',
-    title: 'Смарт Часы Samsung Galaxy Watch6 Classic 47mm',
-    kkTitle: 'Samsung Galaxy Watch6 Classic 47mm смарт сағаты',
-    count: '2',
-    link: '#'
-  },
-
-  {
-    image: 'https://www.technodom.kz/under/samsung-windfree-raffle/gift14.png',
-    title: 'Смартфон Samsung Galaxy Z Flip5 256GB',
-    kkTitle: 'Samsung Galaxy Z Flip5 256GB смартфоны',
-    count: '1',
-    link: '#'
-  },
-
-  {
-    image: 'https://www.technodom.kz/under/samsung-windfree-raffle/gift15.png',
-    title: 'Смартфон Samsung Galaxy S24 5G 128GB',
-    kkTitle: 'Samsung Galaxy S24 5G 128GB смартфоны',
-    count: '2',
-    link: '#'
-  },
-
-  {
-    image: 'https://www.technodom.kz/under/samsung-windfree-raffle/gift16.png',
-    title: 'Микроволновая печь Samsung MS-23F302TAK/BW',
-    kkTitle: 'Samsung MS-23F302TAK/BW микротолқынды пеші',
-    count: '1',
-    link: '#'
-  },
-
-  {
-    image: 'https://www.technodom.kz/under/samsung-windfree-raffle/gift17.png',
-    title: 'Игровой Монитор 32" Samsung Odyssey G5',
-    kkTitle: '32" Samsung Odyssey G5 ойын мониторы',
-    count: '3',
-    link: '#'
-  },
-
-  {
-    image: 'https://www.technodom.kz/under/samsung-windfree-raffle/gift18.png',
-    title: 'QLED 4K',
-    kkTitle: 'QLED 4K',
-    count: '2',
-    link: '#'
-  },
-
-  {
-    image: 'https://www.technodom.kz/under/samsung-windfree-raffle/gift19.png',
-    title: 'Телевизор Samsung 50" Crystal UHD 4K',
-    kkTitle: 'Samsung 50" Crystal UHD 4K теледидары',
-    count: '2',
-    link: '#'
-  },
-
-  {
-    image: 'https://www.technodom.kz/under/samsung-windfree-raffle/gift20.png',
-    title: 'Телевизор Samsung 43" Crystal UHD 4K',
-    kkTitle: 'Samsung 43" Crystal UHD 4K теледидары',
-    count: '4',
-    link: '#'
-  },
-
-  {
-    image: 'https://www.technodom.kz/under/samsung-windfree-raffle/gift21.png',
-    title: 'Микроволновая печь Samsung MG30T5018AK/BW',
-    kkTitle: 'Samsung MG30T5018AK/BW микротолқынды пеші',
-    count: '2',
-    link: '#'
-  },
-
-  {
-    image: 'https://www.technodom.kz/under/samsung-windfree-raffle/gift22.png',
-    title: 'Наушники Samsung Bluetooth Galaxy Buds FE TWS',
-    kkTitle: 'Samsung Bluetooth Galaxy Buds FE TWS құлаққабы',
-    count: '3',
-    link: '#'
-  },
-
-  {
-    image: 'https://www.technodom.kz/under/samsung-windfree-raffle/gift23.png',
-    title: 'Пылесос Samsung VC-C8836V36/XEV',
-    kkTitle: 'Samsung VC-C8836V36/XEV шаңсорғышы',
-    count: '2',
-    link: '#'
-  }
-]
+export const gifts = {
+  0: [
+    {
+      image: 'https://www.technodom.kz/under/samsung-windfree-raffle-new/gifts-0-1.png', 
+      title: 'VS6700',
+      kkTitle: 'VS6700',
+      count: '1', // кол-во шт.
+      link: '#' //ссылка на товар
+    },
+    {
+      image: 'https://www.technodom.kz/under/samsung-windfree-raffle-new/gifts-0-2.png', 
+      title: 'BESPOKE MW5000T',
+      kkTitle: 'BESPOKE MW5000T',
+      count: '1', // кол-во шт.
+      link: '#' //ссылка на товар
+    },
+    {
+      image: 'https://www.technodom.kz/under/samsung-windfree-raffle-new/gifts-0-3.png', 
+      title: 'Galaxy S24',
+      kkTitle: 'Galaxy S24',
+      count: '1', // кол-во шт.
+      link: '#' //ссылка на товар
+    },
+    {
+      image: 'https://www.technodom.kz/under/samsung-windfree-raffle-new/gifts-1-2.png', 
+      title: 'Galaxy Buds3',
+      kkTitle: 'Galaxy Buds3',
+      count: '1', // кол-во шт.
+      link: '#' //ссылка на товар
+    },
+    {
+      image: 'https://www.technodom.kz/under/samsung-windfree-raffle-new/gifts-1-5.png', 
+      title: 'Galaxy Watch7',
+      kkTitle: 'Galaxy Watch7',
+      count: '1', // кол-во шт.
+      link: '#' //ссылка на товар
+    },
+    {
+      image: 'https://www.technodom.kz/under/samsung-windfree-raffle-new/gifts-0-6.png', 
+      title: 'Bespoke Grill MW5000T',
+      kkTitle: 'Bespoke Grill MW5000T',
+      count: '1', // кол-во шт.
+      link: '#' //ссылка на товар
+    },
+    {
+      image: 'https://www.technodom.kz/under/samsung-windfree-raffle-new/gifts-0-7.png', 
+      title: 'Galaxy Buds FE',
+      kkTitle: 'Galaxy Buds FE',
+      count: '1', // кол-во шт.
+      link: '#' //ссылка на товар
+    }
+  ],
+  1: [
+    {
+      image: 'https://www.technodom.kz/under/samsung-windfree-raffle-new/gifts-1-1.png', 
+      title: 'Galaxy Buds FE',
+      kkTitle: 'Galaxy Buds FE',
+      count: '1', // кол-во шт.
+      link: '#' //ссылка на товар
+    },
+    {
+      image: 'https://www.technodom.kz/under/samsung-windfree-raffle-new/gifts-1-2.png', 
+      title: 'Galaxy Buds3',
+      kkTitle: 'Galaxy Buds3',
+      count: '1', // кол-во шт.
+      link: '#' //ссылка на товар
+    },
+    {
+      image: 'https://www.technodom.kz/under/samsung-windfree-raffle-new/gifts-1-3.png', 
+      title: 'Galaxy S25',
+      kkTitle: 'Galaxy S25',
+      count: '1', // кол-во шт.
+      link: '#' //ссылка на товар
+    },
+    {
+      image: 'https://www.technodom.kz/under/samsung-windfree-raffle-new/gifts-1-4.png', 
+      title: 'Galaxy Tab A9+ 5G',
+      kkTitle: 'Galaxy Tab A9+ 5G',
+      count: '1', // кол-во шт.
+      link: '#' //ссылка на товар
+    },
+    {
+      image: 'https://www.technodom.kz/under/samsung-windfree-raffle-new/gifts-1-5.png', 
+      title: 'Galaxy Watch7',
+      kkTitle: 'Galaxy Watch7',
+      count: '1', // кол-во шт.
+      link: '#' //ссылка на товар
+    },
+    {
+      image: 'https://www.technodom.kz/under/samsung-windfree-raffle-new/gifts-1-6.png', 
+      title: 'Аудиосистема Music',
+      kkTitle: 'Аудиосистема Music',
+      count: '1', // кол-во шт.
+      link: '#' //ссылка на товар
+    },
+    {
+      image: 'https://www.technodom.kz/under/samsung-windfree-raffle-new/gifts-1-7.png', 
+      title: 'Jet 75E',
+      kkTitle: 'Jet 75E',
+      count: '1', // кол-во шт.
+      link: '#' //ссылка на товар
+    },
+    {
+      image: 'https://www.technodom.kz/under/samsung-windfree-raffle-new/gifts-1-8.png', 
+      title: 'Микроволновая печь BESPOKE',
+      kkTitle: 'Микроволновая печь BESPOKE',
+      count: '1', // кол-во шт.
+      link: '#' //ссылка на товар
+    },
+    {
+      image: 'https://www.technodom.kz/under/samsung-windfree-raffle-new/gifts-1-9.png', 
+      title: 'Паровой шкаф DF8000NM',
+      kkTitle: 'Паровой шкаф DF8000NM',
+      count: '1', // кол-во шт.
+      link: '#' //ссылка на товар
+    },
+    {
+      image: 'https://www.technodom.kz/under/samsung-windfree-raffle-new/gifts-1-10.png', 
+      title: 'Jet Bot Combo 2',
+      kkTitle: 'Jet Bot Combo 2',
+      count: '1', // кол-во шт.
+      link: '#' //ссылка на товар
+    },
+    {
+      image: 'https://www.technodom.kz/under/samsung-windfree-raffle-new/gifts-1-11.png', 
+      title: 'Саундбар B-серии',
+      kkTitle: 'Саундбар B-серии',
+      count: '1', // кол-во шт.
+      link: '#' //ссылка на товар
+    },
+    {
+      image: 'https://www.technodom.kz/under/samsung-windfree-raffle-new/gifts-1-12.png', 
+      title: 'Фитнес-часы Galaxy Fit3',
+      kkTitle: 'Фитнес-часы Galaxy Fit3',
+      count: '1', // кол-во шт.
+      link: '#' //ссылка на товар
+    }
+  ],
+  2: [
+    {
+      image: 'https://www.technodom.kz/under/samsung-windfree-raffle-new/gifts-2-1.png', 
+      title: 'Bespoke AI Laundry Combo',
+      kkTitle: 'Bespoke AI Laundry Combo',
+      count: '1', // кол-во шт.
+      link: '#' //ссылка на товар
+    },
+    {
+      image: 'https://www.technodom.kz/under/samsung-windfree-raffle-new/gifts-1-1.png', 
+      title: 'Galaxy Buds FE',
+      kkTitle: 'Galaxy Buds FE',
+      count: '1', // кол-во шт.
+      link: '#' //ссылка на товар
+    },
+    {
+      image: 'https://www.technodom.kz/under/samsung-windfree-raffle-new/gifts-1-2.png', 
+      title: 'Galaxy Buds3',
+      kkTitle: 'Galaxy Buds3',
+      count: '1', // кол-во шт.
+      link: '#' //ссылка на товар
+    },
+    {
+      image: 'https://www.technodom.kz/under/samsung-windfree-raffle-new/gifts-1-3.png', 
+      title: 'Galaxy S25',
+      kkTitle: 'Galaxy S25',
+      count: '1', // кол-во шт.
+      link: '#' //ссылка на товар
+    },
+    {
+      image: 'https://www.technodom.kz/under/samsung-windfree-raffle-new/gifts-1-4.png', 
+      title: 'Galaxy Tab A9+ 5G',
+      kkTitle: 'Galaxy Tab A9+ 5G',
+      count: '1', // кол-во шт.
+      link: '#' //ссылка на товар
+    },
+    {
+      image: 'https://www.technodom.kz/under/samsung-windfree-raffle-new/gifts-1-5.png', 
+      title: 'Galaxy Watch7',
+      kkTitle: 'Galaxy Watch7',
+      count: '1', // кол-во шт.
+      link: '#' //ссылка на товар
+    },
+    {
+      image: 'https://www.technodom.kz/under/samsung-windfree-raffle-new/gifts-1-6.png', 
+      title: 'Аудиосистема Music Frame',
+      kkTitle: 'Аудиосистема Music Frame',
+      count: '1', // кол-во шт.
+      link: '#' //ссылка на товар
+    },
+    {
+      image: 'https://www.technodom.kz/under/samsung-windfree-raffle-new/gifts-2-8.png', 
+      title: 'Микроволновая печь соло BESPOKE',
+      kkTitle: 'Микроволновая печь соло BESPOKE',
+      count: '1', // кол-во шт.
+      link: '#' //ссылка на товар
+    },
+    {
+      image: 'https://www.technodom.kz/under/samsung-windfree-raffle-new/gifts-2-9.png', 
+      title: 'Jet Bot Combo 1',
+      kkTitle: 'Jet Bot Combo 1',
+      count: '1', // кол-во шт.
+      link: '#' //ссылка на товар
+    },
+    {
+      image: 'https://www.technodom.kz/under/samsung-windfree-raffle-new/gifts-1-11.png', 
+      title: 'Саундбар B-серии',
+      kkTitle: 'Саундбар B-серии',
+      count: '1', // кол-во шт.
+      link: '#' //ссылка на товар
+    },
+    {
+      image: 'https://www.technodom.kz/under/samsung-windfree-raffle-new/gifts-2-11.png', 
+      title: 'Телевизор 50 QLED 4K',
+      kkTitle: 'Телевизор 50 QLED 4K',
+      count: '1', // кол-во шт.
+      link: '#' //ссылка на товар
+    },
+    {
+      image: 'https://www.technodom.kz/under/samsung-windfree-raffle-new/gifts-1-12.png', 
+      title: 'Фитнес-часы Galaxy Fit3',
+      kkTitle: 'Фитнес-часы Galaxy Fit3',
+      count: '1', // кол-во шт.
+      link: '#' //ссылка на товар
+    },
+  ],
+  3: [
+    {
+      image: 'https://www.technodom.kz/under/samsung-windfree-raffle-new/gifts-1-2.png', 
+      title: 'Galaxy Buds3',
+      kkTitle: 'Galaxy Buds3',
+      count: '1', // кол-во шт.
+      link: '#' //ссылка на товар
+    },
+    {
+      image: 'https://www.technodom.kz/under/samsung-windfree-raffle-new/gifts-3-3.png', 
+      title: 'Galaxy S24',
+      kkTitle: 'Galaxy S24',
+      count: '1', // кол-во шт.
+      link: '#' //ссылка на товар
+    },
+    {
+      image: 'https://www.technodom.kz/under/samsung-windfree-raffle-new/gifts-1-4.png', 
+      title: 'Galaxy Tab A9+ 5G',
+      kkTitle: 'Galaxy Tab A9+ 5G',
+      count: '1', // кол-во шт.
+      link: '#' //ссылка на товар
+    },
+    {
+      image: 'https://www.technodom.kz/under/samsung-windfree-raffle-new/gifts-1-5.png', 
+      title: 'Galaxy Watch7',
+      kkTitle: 'Galaxy Watch7',
+      count: '1', // кол-во шт.
+      link: '#' //ссылка на товар
+    },
+    {
+      image: 'https://www.technodom.kz/under/samsung-windfree-raffle-new/gifts-1-6.png', 
+      title: 'Аудиосистема Music Frame',
+      kkTitle: 'Аудиосистема Music Frame',
+      count: '1', // кол-во шт.
+      link: '#' //ссылка на товар
+    },
+    {
+      image: 'https://www.technodom.kz/under/samsung-windfree-raffle-new/gifts-3-7.png', 
+      title: 'VS6700',
+      kkTitle: 'VS6700',
+      count: '1', // кол-во шт.
+      link: '#' //ссылка на товар
+    },
+    {
+      image: 'https://www.technodom.kz/under/samsung-windfree-raffle-new/gifts-2-8.png', 
+      title: 'Микроволновая печь соло BESPOKE',
+      kkTitle: 'Микроволновая печь соло BESPOKE',
+      count: '1', // кол-во шт.
+      link: '#' //ссылка на товар
+    },
+    {
+      image: 'https://www.technodom.kz/under/samsung-windfree-raffle-new/gifts-1-1.png', 
+      title: 'Galaxy Buds FE',
+      kkTitle: 'Galaxy Buds FE',
+      count: '1', // кол-во шт.
+      link: '#' //ссылка на товар
+    },
+    {
+      image: 'https://www.technodom.kz/under/samsung-windfree-raffle-new/gifts-1-11.png', 
+      title: 'Саундбар B-серии',
+      kkTitle: 'Саундбар B-серии',
+      count: '1', // кол-во шт.
+      link: '#' //ссылка на товар
+    },
+    {
+      image: 'https://www.technodom.kz/under/samsung-windfree-raffle-new/gifts-2-11.png', 
+      title: 'Телевизор 50 QLED 4K',
+      kkTitle: 'Телевизор 50 QLED 4K',
+      count: '1', // кол-во шт.
+      link: '#' //ссылка на товар
+    },
+    {
+      image: 'https://www.technodom.kz/under/samsung-windfree-raffle-new/gifts-1-12.png', 
+      title: 'Фитнес-часы Galaxy Fit3',
+      kkTitle: 'Фитнес-часы Galaxy Fit3',
+      count: '1', // кол-во шт.
+      link: '#' //ссылка на товар
+    },
+  ],
+  4: [
+    {
+      image: 'https://www.technodom.kz/under/samsung-windfree-raffle-new/gifts-1-1.png', 
+      title: 'Galaxy Buds FE',
+      kkTitle: 'Galaxy Buds FE',
+      count: '1', // кол-во шт.
+      link: '#' //ссылка на товар
+    },
+    {
+      image: 'https://www.technodom.kz/under/samsung-windfree-raffle-new/gifts-1-2.png', 
+      title: 'Galaxy Buds3',
+      kkTitle: 'Galaxy Buds3',
+      count: '1', // кол-во шт.
+      link: '#' //ссылка на товар
+    },
+    {
+      image: 'https://www.technodom.kz/under/samsung-windfree-raffle-new/gifts-3-3.png', 
+      title: 'Galaxy S24',
+      kkTitle: 'Galaxy S24',
+      count: '1', // кол-во шт.
+      link: '#' //ссылка на товар
+    },
+    {
+      image: 'https://www.technodom.kz/under/samsung-windfree-raffle-new/gifts-1-5.png', 
+      title: 'Galaxy Watch7',
+      kkTitle: 'Galaxy Watch7',
+      count: '1', // кол-во шт.
+      link: '#' //ссылка на товар
+    },
+    {
+      image: 'https://www.technodom.kz/under/samsung-windfree-raffle-new/gifts-1-6.png', 
+      title: 'Аудиосистема Music Frame',
+      kkTitle: 'Аудиосистема Music Frame',
+      count: '1', // кол-во шт.
+      link: '#' //ссылка на товар
+    },
+    {
+      image: 'https://www.technodom.kz/under/samsung-windfree-raffle-new/gifts-1-7.png', 
+      title: 'Jet 75E',
+      kkTitle: 'Jet 75E',
+      count: '1', // кол-во шт.
+      link: '#' //ссылка на товар
+    },
+    {
+      image: 'https://www.technodom.kz/under/samsung-windfree-raffle-new/gifts-2-8.png', 
+      title: 'Микроволновая печь соло BESPOKE',
+      kkTitle: 'Микроволновая печь соло BESPOKE',
+      count: '1', // кол-во шт.
+      link: '#' //ссылка на товар
+    },
+    {
+      image: 'https://www.technodom.kz/under/samsung-windfree-raffle-new/gifts-1-11.png', 
+      title: 'Саундбар B-серии',
+      kkTitle: 'Саундбар B-серии',
+      count: '1', // кол-во шт.
+      link: '#' //ссылка на товар
+    },
+    {
+      image: 'https://www.technodom.kz/under/samsung-windfree-raffle-new/gifts-2-11.png', 
+      title: 'Телевизор 50 QLED 4K',
+      kkTitle: 'Телевизор 50 QLED 4K',
+      count: '1', // кол-во шт.
+      link: '#' //ссылка на товар
+    },
+    {
+      image: 'https://www.technodom.kz/under/samsung-windfree-raffle-new/gifts-1-12.png', 
+      title: 'Фитнес-часы Galaxy Fit3',
+      kkTitle: 'Фитнес-часы Galaxy Fit3',
+      count: '1', // кол-во шт.
+      link: '#' //ссылка на товар
+    }
+  ],
+}
