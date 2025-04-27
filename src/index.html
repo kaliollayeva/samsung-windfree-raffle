@@ -188,30 +188,46 @@
           <form action="#" class="registration__form" id="form" novalidate>
             <div class="form__input-container">
               <input type="text" class="form__input form__input_type_name" id="form-name" placeholder="ФИО" minlength="3" required>
-              <span class="form-name-error"></span>
+              <span class="form-number-error">Поле обязательно для заполнения</span>
             </div>
             <div class="form__input-container">
-              <input type="text" class="form__input form__input_type_number" id="form-number" placeholder="+7" minlength="7"  required>
-              <span class="form-number-error"></span>
+              <input type="text" name="phone" class="form__input form__input_type_number" id="form-number" placeholder="+7" minlength="7"  required>
+              <span class="form-number-error">Поле обязательно для заполнения</span>
             </div>
             <div class="form__input-container">
-              <input type="text" class="form__input form__input_type_city" id="form-city" placeholder="Город" maxlength="20" required>
-              <span class="form-city-error"></span>
+              <input list="city-list" id="form-city" class="form__input form__input_type_city" placeholder="Введите или выберите город" required>
+              <datalist id="city-list">
+                <!-- сюда динамически добавим города -->
+              </datalist>
+              <span class="form-number-error">Поле обязательно для заполнения</span>
             </div>
+            <div class="form__input-container" id="store-container" style="display: none;">
+              <select id="store-select" class="form__input">
+                <!-- сюда динамически добавим магазины -->
+              </select>
+              <span class="form-store-error"></span>
+            </div>
+          
+            <div class="form__input-container" id="promoter-container" style="display: none;">
+              <select id="promoter-select" class="form__input">
+                <!-- сюда динамически добавим промоутеров -->
+              </select>
+              <span class="form-promoter-error"></span>
+            </div>
+            
             <div class="form__input-container">
-              <label class="form__input-label" for="form-date">
-                Дата покупки
-              </label>
+              <!-- 
+               -->
               <input type="date" class="form__input form__input_type_city" id="form-date" placeholder="Дата покупки" required>
-              <span class="form-city-error"></span>
+              <span class="form-number-error">Поле обязательно для заполнения</span>
             </div>
             <div class="form__input-container">
               <input type="text" class="form__input form__input_type_order_number" id="form-order-number" placeholder="Номер заказа" required>
-              <span class="form-order-number-error"></span>
+              <span class="form-number-error">Поле обязательно для заполнения</span>
             </div>
             <div class="form__input-container">
               <input type="text" class="form__input form__input_type_check_number" id="form-check-number" placeholder="Номер чека" required>
-              <span class="form-order-number-error"></span>
+              <span class="form-number-error">Поле обязательно для заполнения</span>
             </div>
             <button type="submit" id="submitBtn" class="form__submit clickable">Участвовать в розыгрыше</button>
           </form>
@@ -362,6 +378,6 @@
     </template>
   </div>
   
-  <script src="../src/script/giftCard.js" type="module"></script>
+  <script src="../src/script/data.js" type="module"></script>
 </body>
 </html>

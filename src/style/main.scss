@@ -857,9 +857,10 @@ html {
       border-bottom: 1px solid #C0C5C9;
       padding: 12px 0;
       flex: 1;
-      max-width: 340px;
+      max-width: 266px;
       border-radius: 12px 12px 0 0;
       transition: box-shadow .2s ease-in-out;
+      
 
       @media screen and (max-width: 1023px) {
         max-width: 100%;
@@ -870,7 +871,6 @@ html {
         width: 100%;
       }
 
-      
 			// .form__input_type
 
 			&_type_name {
@@ -944,36 +944,28 @@ html {
       }    
   }
 
-  .form-name-error {       
-    font-size: 12px;
-    line-height: 15px;
-    text-align: left;
-    opacity: 0;       
-    height: 3rem;
-  }
-  .form-number-error {      
-    font-size: 12px;
-    line-height: 15px;
-    text-align: left;
-    opacity: 0;
-    height: 3rem;
-  }
-
-  .form-iin-error {
+  // .form-name-error {       
+  //   font-size: 12px;
+  //   line-height: 15px;
+  //   text-align: left;
+  //   opacity: 0;       
+  //   height: 3rem;
+  // }
+  .form-number-error {     
+    display: none; 
     font-size: 12px;
     line-height: 15px;
     text-align: left;
     opacity: 0;
-    height: 3rem;
   }
 
   .form-error_active {
+    display: block;
     color: #FF0000;       
     font-size: 10px;
     font-weight: 300;
     opacity: 1;
     max-width: 250px;
-    height: 3rem;
   } 
 
   .periods {
@@ -1646,4 +1638,25 @@ html {
   flex-wrap: wrap;
   gap: 50px;
   justify-content: center;
+}
+
+.input-error {
+  border: 2px solid red;
+}
+
+.loader {
+  border: 2px solid #f3f3f3; /* Светлый серый */
+  border-top: 2px solid #3498db; /* Синий */
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  animation: spin 1s linear infinite;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

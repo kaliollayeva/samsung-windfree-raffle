@@ -5,6 +5,11 @@ import { giftList } from './script/gift-list';
 import { handleAccordions } from './script/accardeon';
 import { GiftCard } from './script/GiftCard';
 import { Section } from './script/Section';
+import { dataSelect } from './script/data';
+import { validateForm } from './script/validation';
+import { setupPhoneMask } from './script/number';
+
+
 
 const showMoreButton = document.querySelector('.gift__more-button');
 
@@ -191,3 +196,151 @@ tabButtons.forEach(button => {
 });
 
 displayGifts(currentTabIndex);
+
+const cityInput = document.querySelector('#form-city');
+const cityList = document.querySelector('#city-list');
+
+function populateCities() {
+  const cities = Object.keys(dataSelect); // берём все города (ключи объекта)
+
+  cities.forEach((city) => {
+    const option = document.createElement('option');
+    option.value = city;
+    cityList.appendChild(option);
+  });
+}
+
+populateCities();
+
+const storeSelect = document.querySelector('#store-select');
+const promoterSelect = document.querySelector('#promoter-select');
+
+const storeContainer = document.querySelector('#store-container');
+const promoterContainer = document.querySelector('#promoter-container');
+
+// Функция очистки выпадающих списков
+function clearSelect(selectElement) {
+  selectElement.innerHTML = '';
+}
+
+// Обработчик выбора города
+cityInput.addEventListener('input', () => {
+  const selectedCity = cityInput.value.trim();
+
+  clearSelect(storeSelect);
+  clearSelect(promoterSelect);
+  promoterContainer.style.display = 'none';
+
+  if (dataSelect[selectedCity]) {
+    const stores = Object.keys(dataSelect[selectedCity]);
+
+    if (stores.length > 0) {
+      // 👉 добавляем placeholder-опцию
+      const placeholderOption = document.createElement('option');
+      placeholderOption.value = '';
+      placeholderOption.textContent = 'Выберите магазин';
+      placeholderOption.disabled = true;
+      placeholderOption.selected = true;
+      storeSelect.appendChild(placeholderOption);
+    }
+    
+    stores.forEach((storeName) => {
+      const option = document.createElement('option');
+      option.value = storeName;
+      option.textContent = storeName;
+      storeSelect.appendChild(option);
+    });
+
+    storeContainer.style.display = 'block';
+  } else {
+    storeContainer.style.display = 'none';
+  }
+});
+
+// Обработчик выбора магазина
+storeSelect.addEventListener('change', () => {
+  const selectedCity = cityInput.value.trim();
+  const selectedStore = storeSelect.value;
+
+  clearSelect(promoterSelect);
+
+  if (dataSelect[selectedCity] && dataSelect[selectedCity][selectedStore]) {
+    const promoters = dataSelect[selectedCity][selectedStore];
+
+    const placeholderOption = document.createElement('option');
+    placeholderOption.value = '';
+    placeholderOption.textContent = 'Выберите промоутера';
+    placeholderOption.disabled = true;
+    placeholderOption.selected = true;
+    promoterSelect.appendChild(placeholderOption);
+    
+    promoters.forEach((promoterName) => {
+      const option = document.createElement('option');
+      option.value = promoterName;
+      option.textContent = promoterName;
+      promoterSelect.appendChild(option);
+    });
+
+    promoterContainer.style.display = 'block';
+  } else {
+    promoterContainer.style.display = 'none';
+  }
+});
+
+const form = document.getElementById('form');
+
+form.addEventListener('submit', function (e) {
+  e.preventDefault(); // остановим обычную отправку
+  const isValid = validateForm(); // вызываем валидацию
+
+  if(isValid){
+
+      const submitButton = form.querySelector('button[type="submit"]'); // найдём кнопку отправки
+      const originalButtonText = submitButton.textContent; // сохраним оригинальный текст кнопки
+
+      submitButton.innerHTML = `<span class="loader"></span> Отправка...`;
+      submitButton.disabled = true; 
+      
+      const data = {
+      name: document.getElementById('form-name').value,
+      phone: document.getElementById('form-number').value,
+      city: document.getElementById('form-city').value,
+      purchaseDate: document.getElementById('form-date').value,
+      orderNumber: document.getElementById('form-order-number').value,
+      checkNumber: document.getElementById('form-check-number').value,
+      store: document.getElementById('store-select').value,
+      promoter: document.getElementById('promoter-select').value
+    };
+
+    fetch('https://script.google.com/macros/s/AKfycbyYssNT6J5tjmjS3cH7O8p_nCfuNpgoXF1SF5nWSYgzyYEKSBENg4bzTZmYz90jz8EOtA/exec', {
+      method: 'POST',
+      mode: 'no-cors', // чтобы избежать CORS-ошибкиё
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    }).then(() => {
+      submitButton.textContent = 'Зарегистрировано'; // меняем текст кнопки
+      
+      setTimeout(() => {
+        form.reset(); // очистка формы через 3 секунды
+        clearSelect(storeSelect);
+        clearSelect(promoterSelect);
+        storeContainer.style.display = 'none';
+        promoterContainer.style.display = 'none';
+
+        submitButton.textContent = originalButtonText; // возвращаем исходный текст кнопки
+        submitButton.disabled = false;
+      }, 3000);  
+    }).catch((error) => {
+      console.error('Ошибка!', error.message);
+    });
+  } else {
+    console.log('Форма не прошла валидацию');
+  }
+
+});
+
+const phoneInput = document.getElementById('form-number');
+setupPhoneMask(phoneInput);
+
